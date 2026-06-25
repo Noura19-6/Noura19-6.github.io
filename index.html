@@ -5,16 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noura Saad Nasr - Portfolio</title>
     <!-- Import Modern Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-body: #e2e8f0;
+            /* Softer, earthy & pastel color palette */
+            --bg-body: #f4f1ec; 
             --bg-main: #ffffff;
-            --bg-sidebar: #0f172a;
-            --text-main: #334155;
-            --text-light: #94a3b8;
-            --accent: #38bdf8;
-            --accent-gradient: linear-gradient(135deg, #38bdf8, #3b82f6);
+            --bg-sidebar: #e9e5df; 
+            --text-main: #4a4a4a;
+            --text-light: #7a7a7a;
+            --accent: #829a8a; /* Soft Sage Green */
+            --accent-gradient: linear-gradient(135deg, #829a8a, #a3b9ab);
+            --border-light: #d4cfc7;
         }
 
         * {
@@ -38,7 +40,7 @@
             grid-template-columns: 320px 1fr;
             max-width: 1100px;
             background: var(--bg-main);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.04), 0 5px 10px rgba(0, 0, 0, 0.02);
             border-radius: 16px;
             overflow: hidden;
         }
@@ -46,8 +48,9 @@
         /* Sidebar Styles */
         .sidebar {
             background: var(--bg-sidebar);
-            color: #f8fafc;
+            color: var(--text-main);
             padding: 50px 40px;
+            border-right: 1px solid var(--border-light);
         }
 
         .sidebar h1 {
@@ -55,7 +58,8 @@
             font-size: 2.2rem;
             line-height: 1.1;
             margin-bottom: 5px;
-            color: #ffffff;
+            color: #2c2c2c;
+            font-weight: 600;
         }
 
         .sidebar h2 {
@@ -79,7 +83,7 @@
         }
 
         .contact-list a {
-            color: #cbd5e1;
+            color: var(--text-main);
             text-decoration: none;
             transition: color 0.3s;
         }
@@ -90,12 +94,12 @@
 
         .sidebar-heading {
             font-family: 'Poppins', sans-serif;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
+            letter-spacing: 1.2px;
             margin-bottom: 20px;
-            color: #ffffff;
-            border-bottom: 2px solid #334155;
+            color: #2c2c2c;
+            border-bottom: 2px solid var(--border-light);
             padding-bottom: 10px;
         }
 
@@ -118,18 +122,18 @@
         }
 
         .skill-tags span {
-            background: rgba(255, 255, 255, 0.1);
+            background: #ffffff;
             padding: 5px 12px;
             border-radius: 20px;
             font-size: 0.8rem;
-            color: #e2e8f0;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-main);
+            border: 1px solid var(--border-light);
         }
 
         .languages {
             list-style: none;
             font-size: 0.9rem;
-            color: #cbd5e1;
+            color: var(--text-main);
         }
 
         .languages li {
@@ -144,7 +148,7 @@
         .section-title {
             font-family: 'Poppins', sans-serif;
             font-size: 1.5rem;
-            color: var(--bg-sidebar);
+            color: #2c2c2c;
             margin-bottom: 25px;
             position: relative;
             display: inline-block;
@@ -164,7 +168,7 @@
         .profile-text {
             font-size: 1.05rem;
             margin-bottom: 40px;
-            color: #475569;
+            color: var(--text-main);
         }
 
         .timeline-item {
@@ -182,13 +186,14 @@
             font-family: 'Poppins', sans-serif;
             font-weight: 600;
             font-size: 1.15rem;
-            color: var(--bg-sidebar);
+            color: #2c2c2c;
         }
 
         .date {
             font-size: 0.85rem;
             color: var(--text-light);
-            background: #f1f5f9;
+            background: #faf9f8;
+            border: 1px solid var(--border-light);
             padding: 4px 10px;
             border-radius: 12px;
             font-weight: 500;
@@ -196,7 +201,7 @@
 
         .subtitle {
             font-weight: 500;
-            color: #3b82f6;
+            color: var(--accent);
             margin-bottom: 10px;
             font-size: 0.95rem;
         }
@@ -211,7 +216,7 @@
             padding-left: 20px;
             margin-bottom: 8px;
             font-size: 0.95rem;
-            color: #475569;
+            color: var(--text-main);
         }
 
         .desc-list li::before {
@@ -230,17 +235,17 @@
         }
 
         .project-card {
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
+            background: #faf9f8;
+            border: 1px solid var(--border-light);
             border-radius: 10px;
             padding: 25px;
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-            border-color: #cbd5e1;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px -3px rgba(0, 0, 0, 0.05);
+            border-color: #b0c2b6;
         }
 
         .project-card .title {
@@ -270,6 +275,8 @@
             }
             .sidebar {
                 padding: 40px 30px;
+                border-right: none;
+                border-bottom: 1px solid var(--border-light);
             }
             .main-content {
                 padding: 40px 30px;
@@ -290,50 +297,50 @@
     
     <!-- LEFT SIDEBAR -->
     <aside class="sidebar">
-        <h1>Noura Saad Nasr[cite: 1]</h1>
-        <h2>Machine learning engineer[cite: 1]</h2>
+        <h1>Noura Saad Nasr</h1>
+        <h2>Machine learning engineer</h2>
         
         <ul class="contact-list">
-            <li>📞 (+20)1067640820[cite: 1]</li>
-            <li>✉️ <a href="mailto:ns571624@gmail.com">ns571624@gmail.com[cite: 1]</a></li>
-            <li>🔗 <a href="#">LinkedIn[cite: 1]</a></li>
-            <li>💻 <a href="#">GitHub[cite: 1]</a></li>
+            <li>📞 (+20)1067640820</li>
+            <li>✉️ <a href="mailto:ns571624@gmail.com">ns571624@gmail.com</a></li>
+            <li>🔗 <a href="#">LinkedIn</a></li>
+            <li>💻 <a href="#">GitHub</a></li>
         </ul>
 
-        <h3 class="sidebar-heading">Technical Skills[cite: 1]</h3>
+        <h3 class="sidebar-heading">Technical Skills</h3>
         <div class="skills-wrapper">
-            <div class="skill-category">ML & AI[cite: 1]</div>
+            <div class="skill-category">ML & AI</div>
             <div class="skill-tags">
-                <span>TensorFlow[cite: 1]</span>
-                <span>Keras[cite: 1]</span>
-                <span>PyTorch[cite: 1]</span>
-                <span>Scikit-learn[cite: 1]</span>
-                <span>Hugging Face[cite: 1]</span>
-                <span>OpenCV[cite: 1]</span>
+                <span>TensorFlow</span>
+                <span>Keras</span>
+                <span>PyTorch</span>
+                <span>Scikit-learn</span>
+                <span>Hugging Face</span>
+                <span>OpenCV</span>
             </div>
 
-            <div class="skill-category">Languages[cite: 1]</div>
+            <div class="skill-category">Languages</div>
             <div class="skill-tags">
-                <span>Python[cite: 1]</span>
-                <span>C[cite: 1]</span>
-                <span>SQL[cite: 1]</span>
-                <span>MATLAB[cite: 1]</span>
+                <span>Python</span>
+                <span>C</span>
+                <span>SQL</span>
+                <span>MATLAB</span>
             </div>
 
-            <div class="skill-category">Data & Visualization[cite: 1]</div>
+            <div class="skill-category">Data & Visualization</div>
             <div class="skill-tags">
-                <span>Pandas[cite: 1]</span>
-                <span>NumPy[cite: 1]</span>
-                <span>Matplotlib[cite: 1]</span>
-                <span>Seaborn[cite: 1]</span>
+                <span>Pandas</span>
+                <span>NumPy</span>
+                <span>Matplotlib</span>
+                <span>Seaborn</span>
             </div>
         </div>
 
-        <h3 class="sidebar-heading">Languages[cite: 1]</h3>
+        <h3 class="sidebar-heading">Languages</h3>
         <ul class="languages">
-            <li>Arabic (Native)[cite: 1]</li>
-            <li>English (Intermediate)[cite: 1]</li>
-            <li>German (Beginner)[cite: 1]</li>
+            <li>Arabic (Native)</li>
+            <li>English (Intermediate)</li>
+            <li>German (Beginner)</li>
         </ul>
     </aside>
 
@@ -341,78 +348,78 @@
     <main class="main-content">
         
         <!-- PROFILE -->
-        <h3 class="section-title">Profile[cite: 1]</h3>
+        <h3 class="section-title">Profile</h3>
         <p class="profile-text">
-            Results-driven Machine Learning Engineer with a background in Intelligent Systems and a track record of developing high-performance models.[cite: 1] Expert in PyTorch and TensorFlow, specializing in model optimization and hardware-software interfacing.[cite: 1] Engineered end-to-end data pipelines and diagnostic tools that bridge complex algorithmic design with efficient hardware deployment to solve real-world problems.[cite: 1]
+            Results-driven Machine Learning Engineer with a background in Intelligent Systems and a track record of developing high-performance models. Expert in PyTorch and TensorFlow, specializing in model optimization and hardware-software interfacing. Engineered end-to-end data pipelines and diagnostic tools that bridge complex algorithmic design with efficient hardware deployment to solve real-world problems.
         </p>
 
         <!-- EDUCATION -->
-        <h3 class="section-title">Education[cite: 1]</h3>
+        <h3 class="section-title">Education</h3>
         <div class="timeline-item">
             <div class="timeline-header">
-                <div class="title">Kafr El-Sheikh University, BS Engineering[cite: 1]</div>
-                <div class="date">(Sep 2023-Present)[cite: 1]</div>
+                <div class="title">Kafr El-Sheikh University, BS Engineering</div>
+                <div class="date">(Sep 2023-Present)</div>
             </div>
-            <div class="subtitle">Major: Intelligent systems[cite: 1]</div>
+            <div class="subtitle">Major: Intelligent systems</div>
         </div>
 
         <!-- INTERNSHIP -->
-        <h3 class="section-title">Experience[cite: 1]</h3>
+        <h3 class="section-title">Experience</h3>
         <div class="timeline-item">
             <div class="timeline-header">
-                <div class="title">Machine Learning Intern[cite: 1]</div>
-                <div class="date">(Aug 2025-Sep 2025)[cite: 1]</div>
+                <div class="title">Machine Learning Intern</div>
+                <div class="date">(Aug 2025-Sep 2025)</div>
             </div>
-            <div class="subtitle">Genius Technology Center[cite: 1]</div>
+            <div class="subtitle">Genius Technology Center</div>
             <ul class="desc-list">
-                <li>Completed a 60-hour intensive training program focused on practical machine learning applications and model deployment.[cite: 1]</li>
+                <li>Completed a 60-hour intensive training program focused on practical machine learning applications and model deployment.</li>
             </ul>
         </div>
 
         <!-- PROJECTS -->
-        <h3 class="section-title">Project Portfolio[cite: 1]</h3>
+        <h3 class="section-title">Project Portfolio</h3>
         <div class="projects-grid">
             <div class="project-card">
                 <div class="timeline-header">
-                    <div class="title">IKEA Web Scraping System[cite: 1] <a href="#" class="btn-link">View Project[cite: 1]</a></div>
+                    <div class="title">IKEA Web Scraping System <a href="#" class="btn-link">View Project</a></div>
                 </div>
                 <ul class="desc-list" style="margin-top: 15px;">
-                    <li>Engineered a Python-powered data pipeline to automate grocery price collection from retail websites, structuring data into a relational SQLite database.[cite: 1]</li>
-                    <li>Developed a non-destructive tracking system to preserve historical price points, enabling advanced analytics on inflation and market trends.[cite: 1]</li>
-                    <li>Built with modular OOP architecture to transform raw data into a professional-grade consumer intelligence tool.[cite: 1]</li>
+                    <li>Engineered a Python-powered data pipeline to automate grocery price collection from retail websites, structuring data into a relational SQLite database.</li>
+                    <li>Developed a non-destructive tracking system to preserve historical price points, enabling advanced analytics on inflation and market trends.</li>
+                    <li>Built with modular OOP architecture to transform raw data into a professional-grade consumer intelligence tool.</li>
                 </ul>
             </div>
 
             <div class="project-card">
                 <div class="timeline-header">
-                    <div class="title">Thyroid Disease Detection[cite: 1] <a href="#" class="btn-link">View Project[cite: 1]</a></div>
+                    <div class="title">Thyroid Disease Detection <a href="#" class="btn-link">View Project</a></div>
                 </div>
                 <ul class="desc-list" style="margin-top: 15px;">
-                    <li>Developed a high-performance machine learning model to diagnose thyroid conditions based on clinical data.[cite: 1]</li>
-                    <li>Optimized model architecture and data processing workflows to efficiently handle large-scale datasets, improving diagnostic accuracy and computational speed.[cite: 1]</li>
+                    <li>Developed a high-performance machine learning model to diagnose thyroid conditions based on clinical data.</li>
+                    <li>Optimized model architecture and data processing workflows to efficiently handle large-scale datasets, improving diagnostic accuracy and computational speed.</li>
                 </ul>
             </div>
         </div>
 
         <!-- ACTIVITIES & CERTIFICATIONS -->
-        <h3 class="section-title">Activities & Certifications[cite: 1]</h3>
+        <h3 class="section-title">Activities & Certifications</h3>
         
         <div class="timeline-item">
             <div class="timeline-header">
-                <div class="title">IEEE Student Branch[cite: 1]</div>
-                <div class="date">(Oct 2025-Feb 2026)[cite: 1]</div>
+                <div class="title">IEEE Student Branch</div>
+                <div class="date">(Oct 2025-Feb 2026)</div>
             </div>
             <ul class="desc-list">
-                <li><strong>Database Committee Member:</strong> Managed relational database structures and optimized queries.[cite: 1]</li>
-                <li><strong>Python for AI Committee Member:</strong> Contributed to AI development projects using Python.[cite: 1]</li>
+                <li><strong>Database Committee Member:</strong> Managed relational database structures and optimized queries.</li>
+                <li><strong>Python for AI Committee Member:</strong> Contributed to AI development projects using Python.</li>
             </ul>
         </div>
 
         <div class="timeline-item">
             <ul class="desc-list">
-                <li><strong>AI Excellence Innovation Sprints (AXIS)</strong> <span style="color:var(--text-light)">- (Oct 2025-Feb 2026)[cite: 1]</span></li>
-                <li><strong>Getting Started with Deep Learning | NVIDIA</strong> <span style="color:var(--text-light)">- (Sep 2025)[cite: 1]</span></li>
-                <li><strong>AI and Machine Learning Foundations | Sprints</strong> <span style="color:var(--text-light)">- (Jul 2025)[cite: 1]</span></li>
+                <li><strong>AI Excellence Innovation Sprints (AXIS)</strong> <span style="color:var(--text-light)">- (Oct 2025-Feb 2026)</span></li>
+                <li><strong>Getting Started with Deep Learning | NVIDIA</strong> <span style="color:var(--text-light)">- (Sep 2025)</span></li>
+                <li><strong>AI and Machine Learning Foundations | Sprints</strong> <span style="color:var(--text-light)">- (Jul 2025)</span></li>
             </ul>
         </div>
 
